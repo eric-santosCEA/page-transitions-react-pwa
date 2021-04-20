@@ -17,9 +17,12 @@
     justify-content: space-between;
     margin: 0.5rem;
   }
-  //todo
-  @include media(">tablet", "<desktop") {
-    border: 10px solid blue;
+
+  @include media(">425px", "<desktop") {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
   }
 
   a {
@@ -37,6 +40,13 @@
       font-size: 15px;
     }
     @include media(">phone", "<=425px") {
+      width: 327.5px;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px;
+      font-size: 15px;
+    }
+    @include media(">425px", "<desktop") {
       width: 327.5px;
       display: flex;
       justify-content: space-between;
@@ -61,6 +71,10 @@
     min-width: 0;
     width: 327.5px;
   }
+  @include media(">425px", "<desktop") {
+    min-width: 0;
+    width: 327.5px;
+  }
   .page {
     position: absolute;
     .inner {
@@ -74,8 +88,6 @@
         .line-wrap {
           overflow: hidden;
           height: 66px;
-          @include media("<=phone") {
-          }
         }
       }
       p {

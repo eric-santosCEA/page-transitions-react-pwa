@@ -1,7 +1,7 @@
 import React , {useEffect, useRef} from 'react'
 import {TweenMax, Power3} from 'gsap'
 
-const Title = ({lineContent, lineContent2}) => {
+const Title = () => {
 
     let line1 = useRef(null)
     let line2 = useRef(null)
@@ -23,12 +23,12 @@ const Title = ({lineContent, lineContent2}) => {
             <h1 className="page-title">
                 <div className="line-wrap">
                     <div ref={el => line1 = el} className="line">
-                        Hello I am,
+                        Clean Energy America,
                     </div>
                 </div>
                 <div className="line-wrap">
                     <div ref={el => line2 = el} className="line">
-                        Eric
+                        Roofing
                     </div>
                 </div>
             </h1>

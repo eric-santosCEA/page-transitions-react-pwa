@@ -7,10 +7,14 @@ import "./App.scss";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import OurWork from './pages/OurWork'
+import JoinUs from './pages/JoinUs'
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
-  { path: "/about", name: "About", Component: About }
+  { path: "/about", name: "About", Component: About },
+  { path: "/our-work", name: "Our Work", Component: OurWork },
+  { path: "/join-us", name: "Join Us!", Component: JoinUs }
 ];
 
 function App() {

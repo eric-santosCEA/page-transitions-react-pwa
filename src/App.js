@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
-import { gsap } from "gsap";
+import { TweenLite} from "gsap";
 import "./App.scss";
 
 import About from "./pages/About";
@@ -15,7 +15,7 @@ const routes = [
 
 function App() {
   const onEnter = node => {
-    gsap.from(
+    TweenLite.from(
       [node.children[0].firstElementChild, node.children[0].lastElementChild],
       0.6,
       {
@@ -31,7 +31,7 @@ function App() {
   };
 
   const onExit = node => {
-    gsap.to(
+    TweenLite.to(
       [node.children[0].firstElementChild, node.children[0].lastElementChild],
       0.6,
       {

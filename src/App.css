@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins:300,400&display=swap");
+/**
+*
+* Testing
+*
+**/
 .header {
-  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,6 +14,19 @@
   height: 100px;
 }
 
+@media (max-width: 360px) {
+  .header {
+    width: 615px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1rem 1rem;
+  }
+}
+
 .header a {
   margin: 0 28px;
   text-decoration: none;
@@ -17,6 +34,12 @@
   font-size: 12px;
   font-weight: 600;
   font-family: "Poppins";
+}
+
+@media (max-width: 360px) {
+  .header a {
+    font-size: 25px;
+  }
 }
 
 .container {
@@ -32,6 +55,13 @@
           justify-content: center;
 }
 
+@media (max-width: 360px) {
+  .container {
+    min-width: 0;
+    width: 615px;
+  }
+}
+
 .container .page {
   position: absolute;
 }
@@ -40,9 +70,29 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 360px) {
+  .container .page .inner {
+    width: 615px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
 }
 
 .container .page .inner h1 {
@@ -56,6 +106,12 @@
   height: 66px;
 }
 
+@media (max-width: 360px) {
+  .container .page .inner h1 .line-wrap {
+    width: 615px;
+  }
+}
+
 .container .page .inner p {
   font-family: "Poppins";
   margin-top: 200px;
@@ -63,6 +119,14 @@
   font-weight: 300;
   line-height: 24px;
   font-size: 14px;
+}
+
+@media (max-width: 360px) {
+  .container .page .inner p {
+    line-height: 45px;
+    font-size: 52px;
+    width: 615px;
+  }
 }
 
 .page-enter {
@@ -85,34 +149,5 @@
   opacity: 0;
   -webkit-transition: opacity 400ms;
   transition: opacity 400ms;
-}
-
-@media screen and (max-width: 799px) {
-  .header {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .header a {
-    margin: 15rem 4rem;
-    font-size: 20px;
-  }
-  .container {
-    max-width: 799px;
-  }
-  .container .page .inner {
-    position: absolute;
-    right: 15px;
-  }
 }
 /*# sourceMappingURL=App.css.map */

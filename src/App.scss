@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins:300,400&display=swap");
 
 .header {
-  width: 100%;
+  width: 100px;
   display: flex;
   align-items: center;
   height: 100px;
@@ -62,4 +62,35 @@
 .page-exit-active {
   opacity: 0;
   transition: opacity 400ms;
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: auto;
+    margin: 5rem;
+    a {
+      font-size: 50px;
+      margin: 1rem 5rem;
+    }
+  }
+  .container {
+    .page {
+      .inner {
+        display: flex;
+        flex-flow: column wrap;
+        h1 {
+          font-size: 100px;
+          .line-wrap {
+            height: 100px;
+          }
+        }
+        p {
+          border: 1px solid black;
+          font-size: 50px;
+          line-height: 50px;
+          width: 1000px;
+        }
+      }
+    }
+  }
 }

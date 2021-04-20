@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Poppins:300,400&display=swap");
 .header {
-  width: 100%;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,5 +85,37 @@
   opacity: 0;
   -webkit-transition: opacity 400ms;
   transition: opacity 400ms;
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: auto;
+    margin: 5rem;
+  }
+  .header a {
+    font-size: 50px;
+    margin: 1rem 5rem;
+  }
+  .container .page .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .container .page .inner h1 {
+    font-size: 100px;
+  }
+  .container .page .inner h1 .line-wrap {
+    height: 100px;
+  }
+  .container .page .inner p {
+    border: 1px solid black;
+    font-size: 50px;
+    line-height: 50px;
+    width: 1000px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

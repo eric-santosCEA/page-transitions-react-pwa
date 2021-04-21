@@ -1,21 +1,18 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React, {lazy, Suspense} from "react";
+import { Route, Switch } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { TweenLite} from "gsap";
 import "./App.scss";
 
-import About from "./pages/About";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import OurWork from './pages/OurWork'
-import JoinUs from './pages/JoinUs'
 
-const routes = [
-  { path: "/", name: "Home", Component: Home },
-  { path: "/about", name: "About", Component: About },
-  { path: "/our-work", name: "Our Work", Component: OurWork },
-  { path: "/join-us", name: "Join Us!", Component: JoinUs }
-];
+
+const Home = lazy(() => import("./pages/Home.js"));
+const About = lazy(() => import("./pages/About.js"));
+const OurWork = lazy(() => import("./pages/OurWork.js"));
+const JoinUs = lazy(() => import("./pages/JoinUs.js"));
+
+
 
 function App() {
   const onEnter = node => {
@@ -51,24 +48,15 @@ function App() {
   return (
     <>
       <Header />
-      <div className='container'>
-        {routes.map(({ path, Component }) => (
-          <Route key={path} exact path={path}>
-            {({ match }) => (
-              <CSSTransition
-                in={match != null}
-                timeout={1200}
-                classNames='page'
-                onExit={onExit}
-                onEntering={onEnter}
-                unmountOnExit>
-                <div className='page'>
-                  <Component />
-                </div>
-              </CSSTransition>
-            )}
-          </Route>
-        ))}
+      <div className="container">
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Switch>
+          <Route className='page' exact path='/' component={Home}/>
+          <Route className='page' exact path='/about' component={About}/>
+          <Route className='page' exact path='/our-work' component={OurWork}/>
+          <Route className='page' exact path='/join-us' component={JoinUs}/>
+        </Switch>
+      </Suspense>
       </div>
     </>
   );

@@ -5,7 +5,7 @@ const OurWork = () => {
     return (
         <div className="inner">
             <Title/>
-            <div>
+            <div className='page'>
                 <img src="/images/roofing1.webp" alt="roofing-install"/>
                 <p className="info">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique neque veniam debitis, explicabo eligendi ipsam, cumque ad quod ex molestiae

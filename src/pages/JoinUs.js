@@ -5,7 +5,7 @@ const JoinUs = () => {
     return (
         <div className="inner">
             <Title/>
-            <div>
+            <div className='page'>
                 <p className="info">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore similique neque veniam debitis, explicabo eligendi ipsam, cumque ad quod ex molestiae
                     quae adipisci facere distinctio rem ullam eius error corrupti.

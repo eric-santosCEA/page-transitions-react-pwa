@@ -90,13 +90,7 @@
           height: 66px;
         }
       }
-      p {
-        font-family: "Poppins";
-        margin-top: 200px;
-        width: 340px;
-        font-weight: 300;
-        line-height: 24px;
-        font-size: 24px;
+      img {
         @include media("<=phone") {
           padding: 0;
           margin: 0;
@@ -106,6 +100,28 @@
         }
         @include media(">phone", "<=425px") {
           padding: 0;
+          margin: 0;
+          line-height: 30px;
+          font-size: 20px;
+          width: 327.5px;
+        }
+      }
+      p {
+        font-family: "Poppins";
+        margin-top: 50px;
+        width: 340px;
+        font-weight: 300;
+        line-height: 24px;
+        font-size: 24px;
+        @include media("<=phone") {
+          padding: 0 0 5rem 0;
+          margin: 0;
+          line-height: 30px;
+          font-size: 20px;
+          width: 327.5px;
+        }
+        @include media(">phone", "<=425px") {
+          padding: 0 0 5rem 0;
           margin: 0;
           line-height: 30px;
           font-size: 20px;

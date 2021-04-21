@@ -166,17 +166,8 @@
   height: 66px;
 }
 
-.container .page .inner p {
-  font-family: "Poppins";
-  margin-top: 200px;
-  width: 340px;
-  font-weight: 300;
-  line-height: 24px;
-  font-size: 24px;
-}
-
 @media (max-width: 360px) {
-  .container .page .inner p {
+  .container .page .inner img {
     padding: 0;
     margin: 0;
     line-height: 30px;
@@ -186,8 +177,37 @@
 }
 
 @media (min-width: 361px) and (max-width: 425px) {
-  .container .page .inner p {
+  .container .page .inner img {
     padding: 0;
+    margin: 0;
+    line-height: 30px;
+    font-size: 20px;
+    width: 327.5px;
+  }
+}
+
+.container .page .inner p {
+  font-family: "Poppins";
+  margin-top: 50px;
+  width: 340px;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+@media (max-width: 360px) {
+  .container .page .inner p {
+    padding: 0 0 5rem 0;
+    margin: 0;
+    line-height: 30px;
+    font-size: 20px;
+    width: 327.5px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 425px) {
+  .container .page .inner p {
+    padding: 0 0 5rem 0;
     margin: 0;
     line-height: 30px;
     font-size: 20px;

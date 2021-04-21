@@ -3,12 +3,12 @@
   "name": "Clean Energy America Roofing",
   "icons": [
     {
-      "src": "favicon-32x32.png",
+      "src": "/images/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "android192x192.png",
+      "src": "/images/android192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },

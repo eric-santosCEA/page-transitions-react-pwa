@@ -70,6 +70,13 @@ function App() {
           </Route>
         ))}
       </div>
+      <div class="search">
+  <img src="chuck-norris.png" alt="Chuck Norris" width="32" height="32" />
+  <label>
+    <input type="search" />
+    Search words in jokes
+  </label>
+</div>
     </>
   );
 }

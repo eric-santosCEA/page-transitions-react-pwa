@@ -151,6 +151,8 @@
 .search {
   /* Make sure the `div` stays there, even when scrolling. */
   position: fixed;
+  -webkit-app-region: drag;
+  app-region: drag;
   /**
    * Gradient, because why not. Endless opportunities.
    * The gradient ends in maroon, which happens to be the app's
@@ -165,4 +167,8 @@
   width: env(titlebar-area-width, 100%);
   /* Use the environment variable for setting the height with a fallback. */
   height: env(titlebar-area-height, 33px);
+}
+input {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
 }

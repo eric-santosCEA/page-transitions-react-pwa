@@ -24,7 +24,6 @@
       "purpose":"maskable"
     }
   ],
-  "display_override": ["window-controls-overlay"],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
